@@ -1,0 +1,42 @@
+// Reset box-sizing to border-box
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+  padding-left: 0px;
+  margin: 0;
+}
+
+a {
+  color: none;
+}
+
+body {
+  margin: 0;
+  font-family: $font-spoqa;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+input {
+  background: none;
+  border: none;
+  outline: none;
+}

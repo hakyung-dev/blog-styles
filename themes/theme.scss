@@ -1,0 +1,45 @@
+:root {
+  --bg: #f4f2f7;
+  --font: #3c3d4d;
+  --mode: #ffca0a;
+  --light-grey: #e8e6eb;
+  --hover-bg: #efedf2;
+  --nav: #adadad;
+  --nav-active: #6e6e6e;
+  --point-blue: #5066b8;
+  --strong: #ff6246;
+
+  --shadow-toggle: inset 3px 3px 4px #d4d2d5, inset -3px -3px 4px #ffffff;
+  --shadow-text: 2px 2px 2px #a2a1a5, -2px -2px 2px #ffffff;
+  --shadow-right: #d4d2d5;
+  --shadow-left: #ffffff;
+
+  --md-tag: #5066b8;
+  --md-code: #e0dee0;
+  --md-line: #ede9e4;
+
+  --bg-about: #e0e6eb;
+}
+
+.dark {
+  --bg: #2f3135;
+  --font: #e3e3e3;
+  --mode: #adadad;
+  --light-grey: #3b3d42;
+  --hover-bg: #2b2d30;
+  --nav: #6e6e6e;
+  --nav-active: #adadad;
+  --point-blue: #7abaff;
+  --strong: #fba282;
+
+  --shadow-toggle: 6px 6px 5px #26272a, -6px -6px 5px #383b40;
+  --shadow-text: 2px 2px 2px #131314, -2px -2px 2px #54575e;
+  --shadow-left: #47494f;
+  --shadow-right: #26272a;
+
+  --md-tag: #457bb5;
+  --md-code: #1c1d21;
+  --md-line: #3b3d42;
+
+  --bg-about: #313b42;
+}

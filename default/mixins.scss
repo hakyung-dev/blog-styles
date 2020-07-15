@@ -1,0 +1,70 @@
+@mixin respond-to($media) {
+  @if $media == tablet {
+    @media only screen and (max-width: $tablet) {
+      @content;
+    }
+  }
+
+  @if $media == mobile {
+    @media only screen and (max-width: $mobile) {
+      @content;
+    }
+  }
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin font-header {
+  font: {
+    size: 3rem;
+    family: $font-title;
+  }
+  text-shadow: var(--shadow-text);
+  letter-spacing: 0.1rem;
+}
+
+@mixin font($size: 0.9rem, $font: $font-body, $weight: 600) {
+  font: {
+    size: $size;
+    family: $font;
+    weight: $weight;
+  }
+}
+
+@mixin shadow($type) {
+  @if $type == link {
+    box-shadow: makeShadow();
+
+    &:hover {
+      box-shadow: makeShadow(hover);
+    }
+  } @else if $type == input {
+    box-shadow: makeShadow();
+
+    &:hover {
+      box-shadow: makeShadow(hover);
+    }
+
+    &:focus {
+      box-shadow: makeShadow(press);
+    }
+  }
+}
+
+@function makeShadow($type: flat) {
+  @if $type == hover {
+    @return 1px 1px 3px var(--shadow-right), -1px -1px 3px var(--shadow-left);
+  } @else if $type == press {
+    @return inset 3px 3px 5px var(--shadow-right),
+      inset -3px -3px 5px var(--shadow-left);
+  } @else if $type == md {
+    @return inset 1px 1px 1px var(--shadow-right),
+      inset -1px -1px 1px var(--shadow-left);
+  } @else {
+    @return 3px 3px 5px var(--shadow-right), -3px -3px 5px var(--shadow-left);
+  }
+}

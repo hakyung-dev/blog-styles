@@ -1,0 +1,65 @@
+// Size
+$small: 320px;
+$large: 1024px;
+
+$radius-round: 20px;
+$radius: 5px;
+
+// Breakpoints
+$mobile: 414px;
+$tablet: 768px;
+
+// Fonts
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
+@font-face {
+  font-family: 'S-CoreDream-4Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Kaushan+Script&family=Noto+Sans+KR&family=Staatliches&display&family=Bebas+Neue&display=swap');
+
+$font-noto: 'Noto Sans KR', 'Sans-serif';
+$font-spoqa: 'Spoqa Han Sans', 'Noto Sans KR', 'Sans-serif';
+$font-title: 'Bebas Neue', cursive;
+$font-body: 'S-CoreDream-4Regular';
+$font-subtitle: 'DM Serif Display', serif;
+
+// Shadow
+$shadow: 1px 2px 18px rgba(0, 0, 0, 0.1);
+$wide-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+
+// Keyframes
+@keyframes beating {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes swing {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

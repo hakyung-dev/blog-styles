@@ -1,0 +1,125 @@
+.blog-post {
+  margin: 0 auto;
+  min-width: $small;
+  max-width: $large;
+  padding: 50px 100px;
+
+  .post-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+
+    .wrap {
+      font-family: $font-body;
+
+      .title {
+        padding: 5px 0;
+        max-width: 650px;
+        font-size: 2.5rem;
+        word-break: keep-all;
+      }
+
+      .date {
+        margin: 10px 5px;
+        font-size: 0.9rem;
+      }
+
+      .tag-list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-top: 5px;
+
+        li {
+          margin-bottom: 8px;
+          margin: 0 2px;
+        }
+      }
+    }
+  }
+
+  .img {
+    padding-left: 20px;
+  }
+
+  .icon {
+    display: flex;
+    padding: 0 0 20px 30px;
+    font-size: 6rem;
+  }
+
+  .post-body {
+    padding: 30px 0 10px 0;
+  }
+}
+
+.all {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-width: $small;
+  max-width: $large;
+  padding: 50px 100px;
+
+  .title {
+    padding: 10px 0;
+    color: var(--nav-active);
+    @include font(1.2rem, $font-subtitle);
+  }
+
+  .all-button {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0;
+
+    li {
+      margin: 5px;
+    }
+  }
+}
+
+.md-page {
+  margin: 0 auto;
+  min-width: $small;
+  max-width: $large;
+  padding: 50px 100px;
+}
+
+@include respond-to(tablet) {
+  .blog-post {
+    padding: 50px 30px;
+
+    .post-top {
+      flex-direction: column-reverse;
+
+      .wrap {
+        .title {
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+    .img {
+      display: flex;
+      padding: 0 0 10px 0;
+    }
+    .thumbnail {
+      width: 40px !important;
+      height: 40px !important;
+    }
+    .icon {
+      padding: 0;
+      font-size: 2.3rem;
+    }
+  }
+
+  .all {
+    padding: 30px;
+  }
+
+  .md-page {
+    padding: 50px 30px;
+  }
+}

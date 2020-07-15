@@ -1,5 +1,19 @@
 // Variables
 @import 'default/variables';
 
+// Mixin
+@import '/default/mixins';
+
 // Reset
 @import 'default/reset';
+
+// Components
+@import 'components/layout';
+@import 'components/markdown';
+@import 'components/button';
+@import 'components/pages';
+@import 'components/list';
+@import 'components/template';
+
+// Theme
+@import 'themes/theme';
