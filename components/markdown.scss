@@ -64,7 +64,7 @@
   h1,
   h2 {
     border-bottom: 2px solid var(--md-line);
-    margin: 2em 0 1em 0;
+    margin: 1.5em 0 1em 0;
     color: var(--point-blue);
   }
 
@@ -220,31 +220,26 @@
   }
 
   .problem {
-    padding: 10px;
-    background-color: var(--hover-grey);
+    font-size: 0.9rem;
 
-    details {
+    code {
+      font-size: 0.7rem;
+    }
+    .example {
       font-size: 0.8rem;
+    }
 
-      code {
-        font-size: 0.7rem;
-      }
-      .example {
-        font-size: 0.8rem;
-      }
+    li {
+      font-size: 0.8rem;
+      padding-top: 5px;
+    }
 
-      li {
-        font-size: 0.8rem;
-        padding-top: 5px;
-      }
+    .caption {
+      font-size: 0.75rem;
+    }
 
-      .caption {
-        font-size: 0.75rem;
-      }
-
-      img {
-        width: 20%;
-      }
+    img {
+      width: 20%;
     }
   }
 }

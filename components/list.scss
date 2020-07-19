@@ -48,8 +48,8 @@
     flex-wrap: wrap;
 
     .li-tag {
-      margin: 2px;
-      padding: 4px 10px;
+      margin: 2px 2px 4px 2px;
+      padding: 4px 10px 3px;
       border-radius: $radius-round;
       font-size: 0.75rem;
       color: var(--nav);
@@ -70,6 +70,10 @@
 
   &:hover {
     background-color: var(--hover-bg);
+  }
+
+  .link-post {
+    display: flex;
   }
 
   .info {
@@ -94,8 +98,7 @@
       .title {
         padding: 0 5px;
         font-size: 1.2rem;
-        word-break: break-all;
-        word-break: normal;
+        word-break: keep-all;
       }
 
       .date {
@@ -111,7 +114,6 @@
     justify-content: flex-end;
     align-items: center;
     flex-wrap: wrap;
-    max-width: 400px;
 
     li {
       padding: 3px 2px;
@@ -119,13 +121,15 @@
   }
 }
 
-@include respond-to(mobile) {
+@include respond-to(tablet) {
   .simple {
     .item {
       flex-direction: column;
       align-items: center;
+      padding: 17px 20px 15px;
 
       .tag-list {
+        justify-content: center;
         padding: 10px 0 0 0;
       }
     }
@@ -143,7 +147,12 @@
     }
 
     .tag-list {
-      padding: 15px 0 5px;
+      justify-content: center;
+      padding-top: 8px;
+
+      li {
+        margin-top: 5px;
+      }
     }
   }
 }

@@ -37,8 +37,8 @@
 
 .li-tag,
 .post-tag {
-  padding: 5px 12px;
-  @include font($size: 0.85rem, $weight: 400);
+  padding: 5px 10px 3px 11px;
+  @include font($size: 0.75rem, $weight: 400);
   color: var(--nav);
 }
 
