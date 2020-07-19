@@ -29,6 +29,11 @@
     }
   }
 
+  .code {
+    min-width: 350px;
+    @include center;
+  }
+
   pre {
     margin: 1.5rem auto;
     padding: 1.25em 1.3em;
@@ -197,8 +202,7 @@
   }
 
   .back-text {
-    // line-height: 1.1;
-    @include font(20rem, $font-spoqa);
+    @include font(25rem, $font-spoqa);
     color: var(--bg);
     text-shadow: var(--shadow-text);
   }
@@ -214,8 +218,7 @@
     .img {
       position: absolute;
       width: 170px;
-      top: -220px;
-      margin-right: 50px;
+      top: -250px;
     }
   }
 }
@@ -288,7 +291,7 @@
 
   .not {
     .back-text {
-      font-size: 13rem;
+      font-size: 12rem;
     }
 
     .float-container {
@@ -304,10 +307,7 @@
 @include respond-to(mobile) {
   .index-header {
     .code {
-      pre {
-        padding: 10px;
-        font-size: 0.7rem;
-      }
+      min-width: fit-content;
     }
   }
 
