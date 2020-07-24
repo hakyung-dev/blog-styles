@@ -81,9 +81,8 @@
 
   .title {
     margin: 5px 0 0 15px;
-    color: var(--bg);
-    text-shadow: var(--shadow-text);
-    @include font(1.5rem, $font-title, 400);
+    color: var(--nav);
+    @include font(1.2rem, $font-logo, 400);
   }
 
   .logo-image {
