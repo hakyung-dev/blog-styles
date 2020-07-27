@@ -34,12 +34,13 @@
   }
 
   a {
+    background: linear-gradient(transparent 60%, var(--md-link) 0);
+    color: var(--font);
     text-decoration: none;
-    color: var(--point-blue);
     font-weight: 600;
 
     &:hover {
-      text-decoration-line: underline;
+      background: linear-gradient(transparent 60%, var(--md-hover-link) 0);
     }
   }
 
