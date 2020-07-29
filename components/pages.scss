@@ -36,12 +36,26 @@
 
   pre {
     margin: 1.5rem auto;
-    padding: 1.25em 1.3em;
+    padding-top: 3rem;
     max-width: 460px;
-    border-top: 20px solid var(--md-tag);
     border-radius: $radius;
     box-shadow: $wide-shadow;
     font-size: 1rem;
+
+    &::before {
+      content: "\2022 \2022 \2022";
+      position: absolute;
+      padding: 20px 10px 14px;
+      margin: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--point-blue);
+      color: var(--nav);
+      font-size: 35px;
+      line-height: 0;
+      letter-spacing: -0.45em;
+    }
 
     &:hover {
       animation: swing 1.5s infinite ease;
@@ -234,12 +248,6 @@
     .title {
       margin: 1.5rem auto 0 auto;
       padding: 20px 10px;
-    }
-
-    .code {
-      pre {
-        border-top: 20px solid var(--point-blue);
-      }
     }
   }
 

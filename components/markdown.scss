@@ -143,6 +143,12 @@
     font-weight: normal;
   }
 
+  li {
+    .gatsby-highlight {
+      margin: 0;
+    }
+  }
+
   details summary {
     cursor: pointer;
     color: var(--point-blue);
@@ -179,32 +185,13 @@
     border: 1px solid var(--light-grey);
   }
 
-  .gatsby-highlight {
-    z-index: 1;
-    margin-bottom: 2rem;
-  }
-
-  .file-tag {
-    position: relative;
-    background: var(--md-tag);
-    padding: 0.3rem 1rem;
-    margin: 2rem 1em -0.9em 1em;
-    text-align: center;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    z-index: 3;
-    color: var(--bg);
-    font-size: 1rem;
-    font-weight: 600;
-  }
-
   .error-box {
-    background-color: #fff0f0;
+    padding: 0.4em 10px 10px 35px;
     color: #eb3841;
     font-size: 0.85rem;
     font-family: Roboto Mono, monospace;
-    padding: 10px 10px 10px 35px;
 
+    background-color: #fff0f0;
     background-image: url(https://image.flaticon.com/icons/svg/463/463612.svg);
     background-repeat: no-repeat;
     background-size: 13px;
@@ -271,14 +258,65 @@
     center {
       margin: 5px 0;
     }
-
   }
 
-  .language-bash,
-  .language-git,
-  .language-file {
-    border-radius: 0;
+  .gatsby-highlight {
+    z-index: 1;
+    margin-bottom: 2rem;
+  }
+
+  .file-tag {
+    position: relative;
+    background: var(--md-tag);
+    padding: 0.3rem 1rem;
+    margin: 2rem 1.1em -0.9em;
+    border-top-left-radius: 0.2em;
+    border-top-right-radius: 0.2em;
+    z-index: 3;
+    color: var(--nav);
+    font-size: 0.9rem;
+    text-align: center;
+    background: #3e3f41;
+
+    &::before {
+      content: '\2022 \2022 \2022';
+      position: absolute;
+      padding: 0.8rem;
+      margin: 0 28px;
+      top: 0;
+      left: 0;
+      font-size: 2.9em;
+      line-height: 0;
+      letter-spacing: -0.45em;
+      background: #3e3f41;
+      color: var(--nav);
+    }
+  }
+
+  code.language-bash,
+  code.language-git,
+  code.language-terminal {
     font-size: 0.8rem;
     font-weight: 400;
+  }
+
+  pre.language-terminal {
+    box-shadow: $wide-shadow;
+    padding-top: 3rem;
+
+    &::before {
+      content: '\2022 \2022 \2022';
+      position: absolute;
+      margin: 0;
+      top: 0;
+      left: 0;
+      background: #3e3f41;
+      color: var(--nav);
+      width: 100%;
+      font-size: 35px;
+      line-height: 0;
+      padding: 20px 10px 14px;
+      letter-spacing: -0.45em;
+    }
   }
 }
