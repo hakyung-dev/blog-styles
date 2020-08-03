@@ -1,7 +1,8 @@
 /* Background */
-.theme {
-  color: var(--font);
+.light,
+.dark {
   background-color: var(--bg);
+  color: var(--font);
 }
 
 .section-grey {
