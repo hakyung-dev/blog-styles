@@ -1,24 +1,50 @@
 // Size
 $small: 320px;
-$large: 1024px;
+$large: 1200px;
 
 $radius-round: 20px;
 $radius: 5px;
 
 // Breakpoints
-$mobile: 414px;
-$tablet: 768px;
+$mobile: 767px;
+$tablet: 1024px;
 
 // Fonts
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
-@font-face { font-family: 'S-CoreDream-4Regular'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff'); font-weight: normal; font-style: normal; }
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Kaushan+Script&family=Noto+Sans+KR&family=Dancing+Script&family=Staatliches&display&family=Bebas+Neue&display=swap');
+@font-face {
+  font-family: 'GmarketSansLight';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Binggrae-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae-Bold.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Kaushan+Script&family=Noto+Sans+KR&family=Dancing+Script&family=Roboto&display&family=Staatliches&display&family=Bebas+Neue&display=swap');
+@font-face {
+  font-family: 'S-CoreDream-4Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
-$font-noto: 'Noto Sans KR', 'Sans-serif';
-$font-spoqa: 'Spoqa Han Sans', 'Noto Sans KR', 'Sans-serif';
-$font-title: 'Bebas Neue', cursive;
-$font-body: 'S-CoreDream-4Regular', 'Noto Sans KR';
-$font-subtitle: 'DM Serif Display', serif;
+$font-main: 'Spoqa Han Sans', 'Noto Sans KR', Sans-serif;
+$font-title: 'Roboto', 'GmarketSansMedium', 'Noto Sans KR', Sans-serif;
+$font-capital: 'Bebas Neue', cursive;
+$font-subtitle: 'DM Serif Display', 'Binggrae-Bold', serif;
 $font-logo: 'Dancing Script', cursive;
 
 // Shadow

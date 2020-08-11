@@ -1,8 +1,6 @@
-.md-body,
-.post-body {
+.markdown {
   line-height: 1.7;
   word-wrap: break-all;
-  font-size: 1.1rem;
 
   img {
     display: block;
@@ -14,7 +12,7 @@
   .caption {
     margin: -15px 0 15px 0;
     font-size: 0.85rem;
-    color: var(--nav);
+    color: var(--font-1);
 
     del {
       font-size: 0.85rem;
@@ -25,7 +23,7 @@
     p {
       text-align: center;
       font-size: 0.85rem;
-      color: var(--nav);
+      color: var(--font-1);
     }
   }
 
@@ -46,11 +44,15 @@
 
   blockquote {
     display: block;
-    margin: 1em 30px;
-    padding: 1em;
-    border-left: 3px solid var(--point-blue);
+    margin: 1rem 30px;
+    padding: 1rem;
+    border-left: 3px solid var(--primary);
     box-shadow: makeShadow();
-    @include font($weight: 400);
+    font: {
+      size: 0.95rem;
+      family: $font-title;
+    }
+
     p {
       margin: 0;
     }
@@ -63,22 +65,29 @@
   }
 
   h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--primary);
+    font-family: $font-title;
+  }
+
+  h1,
   h2 {
-    border-bottom: 2px solid var(--md-line);
-    margin: 1.5em 0 1em 0;
-    color: var(--point-blue);
+    border-bottom: 2px solid var(--bg-grey);
+    margin: 3rem 0 1rem 0;
   }
 
   h3 {
-    margin: 1.5em 0 0.5em 0;
-    color: var(--point-blue);
+    margin: 1.5rem 0 0.5rem 0;
   }
 
   h4,
   h5,
   h6 {
-    margin: 1em 0 5px 0;
-    color: var(--point-blue);
+    margin: 1rem 0 5px 0;
   }
 
   h3 + p,
@@ -118,7 +127,7 @@
 
       &:before {
         content: '\2022 ';
-        color: var(--point-blue);
+        color: var(--primary);
         font-weight: bold;
         padding-right: 10px;
       }
@@ -151,9 +160,11 @@
 
   details summary {
     cursor: pointer;
-    color: var(--point-blue);
-    font-size: 0.9rem;
-    font-weight: bold;
+    color: var(--primary);
+    font: {
+      size: 0.9rem;
+      weight: 600;
+    }
 
     &:focus {
       outline: none;
@@ -174,15 +185,15 @@
 
   th {
     padding: 0 10px;
-    background-color: var(--point-blue);
-    border: 1px solid var(--point-blue);
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
     color: var(--bg);
     text-align: center;
   }
 
   td {
     padding: 5px 15px;
-    border: 1px solid var(--light-grey);
+    border: 1px solid var(--bg-grey);
   }
 
   .error-box {
@@ -208,7 +219,7 @@
   .example {
     padding-left: 20px;
     margin: 20px 0;
-    border-left: 2px solid var(--point-blue);
+    border-left: 2px solid var(--primary);
     white-space: pre-wrap;
     font-size: 0.9rem;
     font-family: Roboto Mono, monospace;
@@ -260,6 +271,14 @@
     }
   }
 
+  .red {
+    color: #f94c4b;
+    font: {
+      size: 1.1rem;
+      weight: 600;
+    }
+  }
+
   .gatsby-highlight {
     z-index: 1;
     margin-bottom: 2rem;
@@ -267,13 +286,12 @@
 
   .file-tag {
     position: relative;
-    background: var(--md-tag);
     padding: 0.3rem 1rem;
     margin: 2rem 1.1em -0.9em;
-    border-top-left-radius: 0.2em;
-    border-top-right-radius: 0.2em;
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
     z-index: 3;
-    color: var(--nav);
+    color: var(--font-1);
     font-size: 0.9rem;
     text-align: center;
     background: #3e3f41;
@@ -289,15 +307,17 @@
       line-height: 0;
       letter-spacing: -0.45em;
       background: #3e3f41;
-      color: var(--nav);
+      color: var(--font-1);
     }
   }
 
   code.language-bash,
   code.language-git,
   code.language-terminal {
-    font-size: 0.8rem;
-    font-weight: 400;
+    font: {
+      size: 0.8rem;
+      weight: 400;
+    }
   }
 
   pre.language-terminal {
@@ -307,15 +327,15 @@
     &::before {
       content: '\2022 \2022 \2022';
       position: absolute;
+      padding: 20px 10px 14px;
       margin: 0;
+      width: 100%;
       top: 0;
       left: 0;
       background: #3e3f41;
-      color: var(--nav);
-      width: 100%;
+      color: var(--font-1);
       font-size: 35px;
       line-height: 0;
-      padding: 20px 10px 14px;
       letter-spacing: -0.45em;
     }
   }

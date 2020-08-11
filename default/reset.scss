@@ -1,6 +1,7 @@
 // Reset box-sizing to border-box
 html {
   box-sizing: border-box;
+  font-size: 100%;
 }
 
 *,
@@ -23,7 +24,7 @@ a {
 
 body {
   margin: 0;
-  font-family: $font-spoqa;
+  font-family: $font-main;
 }
 
 h1,
@@ -33,10 +34,27 @@ h4,
 h5,
 h6 {
   margin: 0;
+  font-family: $font-title;
+}
+
+h1 {
+  font-size: 2em;
 }
 
 input {
   background: none;
   border: none;
   outline: none;
+}
+
+@include respond-to(tablet) {
+  html {
+    font-size: 95%;
+  }
+}
+
+@include respond-to(mobile) {
+  html {
+    font-size: 85%;
+  }
 }

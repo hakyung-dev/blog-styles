@@ -12,30 +12,16 @@
   }
 }
 
-@mixin center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 @mixin font-header {
-  font: {
-    size: 3rem;
-    family: $font-title;
-  }
   text-shadow: var(--shadow-text);
   letter-spacing: 0.1rem;
-}
-
-@mixin font($size: 0.9rem, $font: $font-body, $weight: 600) {
   font: {
-    size: $size;
-    family: $font;
-    weight: $weight;
+    size: 3rem;
+    family: $font-capital;
   }
 }
 
-@mixin shadow($type) {
+@mixin activeShadow($type) {
   @if $type == link {
     box-shadow: makeShadow();
 
@@ -65,6 +51,6 @@
     @return inset 1px 1px 1px var(--shadow-right),
       inset -1px -1px 1px var(--shadow-left);
   } @else {
-    @return 3px 3px 5px var(--shadow-right), -3px -3px 5px var(--shadow-left);
+    @return 3px 3px 5px var(--shadow-right), -2px -2px 4px var(--shadow-left);
   }
 }

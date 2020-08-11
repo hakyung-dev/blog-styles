@@ -1,19 +1,19 @@
 /* Link Buttons */
 .link.text {
-  color: var(--nav);
+  color: var(--font-1);
 
   &:hover {
-    color: var(--nav-active);
+    color: var(--font-2);
   }
 }
 
 .link.active-text {
-  color: var(--nav-active);
+  color: var(--font-2);
 }
 
 .link.button {
-  @include shadow(link);
-  border: 1px solid var(--light-grey);
+  @include activeShadow(link);
+  border: 1px solid var(--bg-grey);
 }
 
 .all-button {
@@ -37,9 +37,13 @@
 
 .li-tag,
 .post-tag {
-  padding: 5px 10px 3px 11px;
-  @include font($size: 0.75rem, $weight: 400);
-  color: var(--nav);
+  padding: 0.29rem 0.72rem 0.22rem 0.78rem;
+  color: var(--font-1);
+  font: {
+    size: 0.75rem;
+    family: $font-title;
+    weight: 600;
+  }
 }
 
 .li-category,
@@ -53,13 +57,22 @@
 .all-categories,
 .bottom-tag,
 .bottom-category {
-  padding: 8px 15px 6px 15px;
-  color: var(--nav);
-  @include font;
+  padding: 0.42rem 0.72rem 0.35rem 0.72rem;
+  color: var(--font-1);
+  font: {
+    size: 0.9rem;
+    family: $font-title;
+    weight: 600;
+  }
 }
 
 .path {
-  @include font;
+  margin: 0.5rem 0;
+  font: {
+    size: 0.9rem;
+    family: $font-title;
+    weight: 600;
+  }
 }
 
 .strong {
@@ -71,7 +84,9 @@
   display: none;
 }
 .switch-label-theme {
-  @include center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
   margin-left: 10px;
   height: 50px;
@@ -93,13 +108,15 @@
   padding: 10px;
 
   .search-icon {
-    @include center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     width: 40px;
     height: 40px;
     margin-top: 4px;
     margin-left: 3px;
-    color: var(--point-blue);
+    color: var(--primary);
     font-size: 1.3rem;
   }
 
@@ -112,13 +129,17 @@
     height: 45px;
     border-radius: 35px;
     transition: width 0.3s ease;
-    color: var(--point-blue);
+    color: var(--primary);
     cursor: pointer;
-    @include font;
-    @include shadow(input);
+    font: {
+      size: 0.9rem;
+      family: $font-title;
+      weight: 600;
+    }
+    @include activeShadow(input);
 
     &::placeholder {
-      color: var(--point-blue);
+      color: var(--primary);
     }
 
     &:focus {
