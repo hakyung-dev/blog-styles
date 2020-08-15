@@ -47,6 +47,10 @@ input {
   outline: none;
 }
 
+button:focus {
+  outline: 0;
+}
+
 @include respond-to(tablet) {
   html {
     font-size: 95%;
