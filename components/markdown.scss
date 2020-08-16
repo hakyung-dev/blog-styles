@@ -1,4 +1,6 @@
 .markdown {
+  padding-top: 20px;
+  padding-bottom: 20px;
   line-height: 1.7;
   word-wrap: break-all;
 
@@ -303,40 +305,55 @@
       margin: 0 28px;
       top: 0;
       left: 0;
-      font-size: 2.9em;
+      font-size: 2.5rem;
       line-height: 0;
-      letter-spacing: -0.45em;
+      letter-spacing: -0.48em;
       background: #3e3f41;
       color: var(--font-1);
     }
   }
 
   code.language-bash,
-  code.language-git,
-  code.language-terminal {
+  code.language-git {
     font: {
       size: 0.8rem;
       weight: 400;
     }
   }
 
-  pre.language-terminal {
+  pre.language-bash,
+  pre.language-git {
     box-shadow: $wide-shadow;
     padding-top: 3rem;
 
     &::before {
       content: '\2022 \2022 \2022';
       position: absolute;
-      padding: 20px 10px 14px;
+      padding: 1.2rem 0.5rem;
       margin: 0;
       width: 100%;
       top: 0;
       left: 0;
       background: #3e3f41;
       color: var(--font-1);
-      font-size: 35px;
+      font-size: 2.5rem;
       line-height: 0;
       letter-spacing: -0.45em;
+    }
+  }
+}
+
+@include respond-to(mobile) {
+  .markdown {
+    pre[class*='language-'] {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .file-tag {
+      margin-left: 0;
+      margin-right: 0;
+      text-align: right;
     }
   }
 }
