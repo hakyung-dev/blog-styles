@@ -7,12 +7,16 @@
 
 #main {
   position: relative;
-  margin: 120px auto 0 auto;
+  margin: 20px auto 0 auto;
   z-index: 2;
 }
 
 section {
   background-color: var(--bg);
+}
+
+.page-top {
+  padding-top: 100px;
 }
 
 .container {
