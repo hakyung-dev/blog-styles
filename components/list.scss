@@ -1,7 +1,67 @@
-/* Simple List in Index Page*/
-.simple {
+.post-list {
   font-family: $font-title;
 
+  .post-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 20px 50px;
+    border-bottom: 1px solid var(--bg-grey);
+
+    &:hover {
+      background-color: var(--hover-bg);
+    }
+
+    .item-info {
+      display: flex;
+      color: var(--font);
+
+      .img {
+        display: flex;
+        align-items: center;
+      }
+
+      .level {
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+      }
+
+      .wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 15px;
+
+        .title {
+          padding: 0 5px;
+          font-size: 1.35rem;
+          word-break: break-word;
+        }
+
+        .small {
+          padding: 0.27rem 0 0 6px;
+          color: var(--font-2);
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .item-list {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-wrap: wrap;
+
+      li {
+        padding: 3px 2px;
+      }
+    }
+  }
+}
+
+/* Simple List in Index Page*/
+.simple {
   .item {
     display: flex;
     justify-content: space-between;
@@ -53,64 +113,6 @@
   }
 }
 
-/* Basic Post List */
-.basic {
-  margin: 0;
-  padding: 20px 50px;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--bg-grey);
-  font-family: $font-title;
-
-  &:hover {
-    background-color: var(--hover-bg);
-  }
-
-  .link-post {
-    display: flex;
-  }
-
-  .info {
-    display: flex;
-    color: var(--font);
-
-    .img {
-      display: flex;
-      align-items: center;
-    }
-
-    .wrap {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 0 15px;
-
-      .title {
-        padding: 0 5px;
-        font-size: 1.35rem;
-        word-break: keep-all;
-      }
-
-      .date {
-        padding: 0.27rem 0 0 6px;
-        color: var(--font-2);
-        font-size: 0.8rem;
-      }
-    }
-  }
-
-  .tag-list {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-wrap: wrap;
-
-    li {
-      padding: 3px 2px;
-    }
-  }
-}
-
 @include respond-to(tablet) {
   .simple {
     .item {
@@ -129,24 +131,36 @@
     }
   }
 
-  .basic {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 30px;
+  .post-list {
+    .post-item {
+      flex-direction: column;
 
-    .info {
-      .wrap {
-        padding: 0 0 0 15px;
+      .item-info {
+        .wrap {
+          .title {
+            word-break: break-all;
+          }
+        }
+      }
+      .tag-list {
+        justify-content: center;
+        padding-top: 10px;
+        li {
+          margin-top: 5px;
+        }
       }
     }
 
-    .tag-list {
-      justify-content: center;
-      padding-top: 8px;
+    .basic {
+      align-items: center;
+    }
+  }
+}
 
-      li {
-        margin-top: 5px;
-      }
+@include respond-to(mobile) {
+  .post-list {
+    .post-item {
+      padding: 20px;
     }
   }
 }

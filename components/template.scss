@@ -1,33 +1,79 @@
-.post-top {
-  padding-top: 70px;
+.template-top {
+  padding-top: 170px;
   padding-bottom: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  .wrap {
+  .title {
+    font: {
+      size: 2rem;
+      family: $font-subtitle;
+    }
+
+    .by {
+      text-decoration: underline;
+    }
+  }
+
+  .post-info {
     max-width: 700px;
     display: flex;
     flex-direction: column;
-  }
 
-  .title {
-    font-size: 2.5rem;
-    word-break: keep-all;
-  }
-
-  .date {
-    margin: 5px 8px;
-  }
-
-  .tag-list {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-
-    li {
-      margin: 3px;
+    .title {
+      font-size: 2.5rem;
+      font-family: $font-title;
+      word-break: keep-all;
     }
+
+    .date {
+      margin: 5px 8px;
+    }
+
+    .tag-list {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+
+      li {
+        margin: 3px;
+      }
+    }
+  }
+
+  .problem-info {
+    display: flex;
+    align-items: center;
+
+    .title {
+      font-family: $font-title;
+      font-size: 3rem;
+      word-break: keep-all;
+    }
+    .level {
+      padding-right: 5px;
+      font-size: 3rem;
+    }
+    .from {
+      align-self: flex-start;
+      margin: 3px 8px;
+      color: var(--font-2);
+      font: {
+        size: 1.2rem;
+        weight: 600;
+      }
+    }
+  }
+
+  .red {
+    color: #e66e68;
+  }
+  .orange {
+    color: #ffcd90;
+  }
+  .blue {
+    color: #6091e6;
   }
 }
 
@@ -37,9 +83,9 @@
   .title {
     padding-bottom: 10px;
     border-bottom: 2px solid var(--bg-grey);
-    color: var(--primary);
+    color: var(--font-2);
     font: {
-      size: 1.8rem;
+      size: 1.5rem;
       family: $font-title;
       weight: 600;
     }
@@ -50,29 +96,10 @@
   }
 }
 
-/* Filtered Page */
-.filter-top {
-  padding-top: 70px;
-
-  .title {
-    font: {
-      size: 2rem;
-      family: $font-subtitle;
-    }
-  }
-
-  .by {
-    text-decoration: underline;
-  }
-}
-
-.filter-list {
-  min-height: 500px;
-}
-
 .all {
   padding-top: 3rem;
   padding-bottom: 3rem;
+  min-height: 250px;
 
   .title {
     color: var(--font-2);
@@ -93,19 +120,45 @@
   }
 }
 
-.md-page {
-  padding-top: 30px;
-  padding-bottom: 30px;
+.problem-bottom-tag {
+  padding-top: 5rem;
+
+  .title {
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--bg-grey);
+    color: var(--font-2);
+    font: {
+      size: 1.1rem;
+      family: $font-title;
+      weight: 600;
+    }
+  }
+
+  .tag-list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 15px 0;
+
+    li {
+      margin: 3px;
+    }
+  }
 }
 
 @include respond-to(mobile) {
-  .post-top {
+  .template-top {
     flex-direction: column-reverse;
     align-items: flex-start;
 
     .thumbnail {
       width: 60px !important;
       height: 60px !important;
+    }
+
+    .problem-info {
+      flex-direction: column;
+      align-items: flex-start;
     }
   }
 }

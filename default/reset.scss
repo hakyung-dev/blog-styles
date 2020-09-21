@@ -47,6 +47,11 @@ input {
   outline: none;
 }
 
+button {
+  background: none;
+  border: none;
+}
+
 button:focus {
   outline: 0;
 }

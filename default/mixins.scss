@@ -12,15 +12,6 @@
   }
 }
 
-@mixin font-header {
-  text-shadow: var(--shadow-text);
-  letter-spacing: 0.1rem;
-  font: {
-    size: 3rem;
-    family: $font-capital;
-  }
-}
-
 @mixin activeShadow($type) {
   @if $type == link {
     box-shadow: makeShadow();

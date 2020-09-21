@@ -79,11 +79,12 @@
   color: var(--strong);
 }
 
-/* Theme Switch */
-.switch-checkbox {
+.invisible {
   display: none;
 }
-.switch-label-theme {
+
+/* Theme Switch */
+.switch-label {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,35 +102,139 @@
   }
 }
 
-/* Search */
-.search {
+/* Filter Checkbox*/
+.filter-checkbox {
+  &:checked + label {
+    color: var(--font-2);
+    box-shadow: makeShadow(press);
+  }
+}
+
+.filter-label {
+  display: flex;
+  margin: 10px 0;
+  border-radius: 20px;
+  color: var(--font-1);
+  width: 120px;
+  padding: 3px 13px;
+  box-shadow: makeShadow();
+  font: {
+    size: 0.9rem;
+    weight: 600;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .icon {
+    margin-right: 5px;
+    font-size: 1rem;
+  }
+}
+
+.reset {
   display: flex;
   align-items: center;
+  margin: 10px 0;
+  color: var(--font-1);
+  font: {
+    size: 1.3rem;
+    family: $font-title;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: var(--font-2);
+  }
+}
+
+.close {
+  align-items: right;
+  color: var(--font-1);
+  font-size: 2rem;
+  width: 30px;
+  height: 30px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.side-checkbox {
+  &:checked + .side-label {
+    color: #6091e6;
+    box-shadow: makeShadow(press);
+  }
+}
+
+.side-label {
+  display: none;
+}
+
+/* Hide Keywords*/
+.key-checkbox {
+  &:checked + label {
+    color: var(--strong);
+    box-shadow: makeShadow(press);
+  }
+}
+
+.key-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  border-radius: 10px;
+  color: var(--font-1);
+  width: 40px;
+  height: 40px;
   padding: 10px;
+  box-shadow: makeShadow();
+  font: {
+    size: 3rem;
+    weight: 600;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .icon {
+    margin-right: 2px;
+    font-size: 1rem;
+  }
+}
+
+/* Search */
+.search-click {
+  display: flex;
+  align-items: center;
 
   .search-icon {
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    width: 40px;
-    height: 40px;
-    margin-top: 4px;
+    width: 35px;
+    height: 35px;
+    // margin-top: 4px;
     margin-left: 3px;
-    color: var(--primary);
-    font-size: 1.3rem;
+    color: var(--font-1);
+    font-size: 1.2rem;
+    font-weight: 600;
   }
 
   .search-box {
     position: relative;
     z-index: 1;
-    padding-left: 45px;
-    margin-top: 5px;
-    width: 45px;
-    height: 45px;
-    border-radius: 35px;
+    padding-left: 40px;
+    // margin-top: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
     transition: width 0.3s ease;
-    color: var(--primary);
+    color: var(--font-2);
     cursor: pointer;
     font: {
       size: 0.9rem;
@@ -139,13 +244,88 @@
     @include activeShadow(input);
 
     &::placeholder {
-      color: var(--primary);
+      color: var(--font-1);
     }
 
     &:focus {
-      width: 200px;
+      width: 160px;
       outline: none;
       cursor: text;
+    }
+  }
+}
+
+.search-wide {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+
+  .search-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    // margin-top: 4px;
+    margin-left: 5px;
+    color: var(--font-1);
+    font-size: 1.3rem;
+  }
+
+  .search-box {
+    position: relative;
+    z-index: 1;
+    padding-left: 45px;
+    // margin-top: 5px;
+    width: 200px;
+    height: 45px;
+    border-radius: 35px;
+    transition: width 0.3s ease;
+    color: var(--font-2);
+    cursor: pointer;
+    font: {
+      size: 0.9rem;
+      family: $font-title;
+      weight: 600;
+    }
+    @include activeShadow(input);
+
+    &::placeholder {
+      color: var(--font-1);
+    }
+
+    &:focus {
+      outline: none;
+      cursor: text;
+    }
+  }
+}
+
+@include respond-to(mobile) {
+  .side-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // margin: 10px;
+    border-radius: 10px;
+    color: var(--font-1);
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    box-shadow: makeShadow();
+    font: {
+      size: 3rem;
+      weight: 600;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .icon {
+      margin-right: 2px;
+      font-size: 1rem;
     }
   }
 }
