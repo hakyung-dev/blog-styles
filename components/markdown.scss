@@ -301,8 +301,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    // margin: 2rem 1rem -0.9rem;
-    margin: 0rem 1rem -0.9rem ;
+    margin: 1rem 1rem -0.9rem ;
     border-top-left-radius: $radius;
     border-top-right-radius: $radius;
     z-index: 3;
@@ -365,9 +364,17 @@
     }
 
     .file-tag {
-      margin: 0rem 0rem -0.9rem;
+      margin: 1rem 0rem -0.9rem;
       padding-right: 1rem;
       justify-content: flex-end;
+    }
+
+    blockquote {
+      margin: 1rem 0;
+    }
+
+    .gatsby-resp-image-figure {
+      margin: 0;
     }
   }
 }
