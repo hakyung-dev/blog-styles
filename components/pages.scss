@@ -245,6 +245,7 @@
     .subtitle {
       font-family: $font-capital;
       font-weight: 400;
+      font-size: 1.5rem;
       margin: 3rem 5px 1rem;
     }
   }
@@ -365,7 +366,7 @@
     padding-bottom: 80px;
 
     .title {
-      padding: 0 0px;
+      padding: 0 10px;
     }
     .code {
       min-width: fit-content;

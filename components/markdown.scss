@@ -22,8 +22,10 @@
   }
 
   .gatsby-resp-image-figcaption {
+    text-align: center;
+    // font-weight: 400;
+
     p {
-      text-align: center;
       font-size: 0.85rem;
       color: var(--bg-grey-stronger);
     }
@@ -111,7 +113,7 @@
   }
 
   ol {
-    padding-left: 35px;
+    padding-left: 40px;
     list-style-type: decimal;
     font-size: 1rem;
   }
@@ -137,12 +139,13 @@
   }
 
   li ul {
-    padding-left: 30px;
+    padding-left: 15px;
   }
 
   ul li ol li {
     &:before {
       content: '';
+      padding: 0;
     }
   }
 
@@ -294,6 +297,7 @@
   .gatsby-highlight {
     z-index: 1;
     margin-bottom: 2rem;
+    font-weight: 400;
   }
 
   .file-tag {
@@ -301,7 +305,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1rem 1rem -0.9rem ;
+    margin: 1rem 1rem -0.9rem;
     border-top-left-radius: $radius;
     border-top-right-radius: $radius;
     z-index: 3;
@@ -329,6 +333,12 @@
     font: {
       size: 0.8rem;
       weight: 400;
+    }
+  }
+
+  code {
+    .list {
+      display: inline;
     }
   }
 
@@ -374,6 +384,18 @@
     }
 
     .gatsby-resp-image-figure {
+      margin: 0;
+    }
+
+    ol {
+      padding-left: 15px;
+    }
+
+    li ul {
+      padding-left: 10px;
+    }
+
+    details {
       margin: 0;
     }
   }
