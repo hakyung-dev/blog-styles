@@ -35,6 +35,7 @@
 .fix-container {
   position: fixed;
   display: flex;
+  flex-direction: column;
   align-items: center;
   width: 100%;
   top: 0;
@@ -108,6 +109,42 @@
     justify-content: center;
     align-items: center;
     width: 40px;
+  }
+}
+
+.warning {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #d4c9bc;
+  font-size: 1.3rem;
+  font-family: $font-title;
+  padding: 150px 100px;
+  color: #3c3d4d;
+  z-index: 100;
+
+  .img {
+    height: 300px;
+  }
+
+  .text {
+    padding-left: 10px;
+  }
+
+  .warn-icon {
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    padding: 0 10px;
+    .ie {
+      padding-left: 10px;
+      font-size: 2rem;
+      color: #c24c50;
+    }
   }
 }
 
@@ -305,5 +342,10 @@ footer {
 
   .site-map {
     padding: 1rem 0.3rem 4rem 2.5rem;
+  }
+
+  .warning {
+    flex-direction: column;
+    padding: 80px 40px 50px;
   }
 }

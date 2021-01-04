@@ -243,28 +243,30 @@
       content: 'Example ';
       font-weight: bold;
     }
+
+    table {
+      margin: 10px 0;
+    }
   }
 
   .problem {
-    details {
-      margin: 20px;
-      font-size: 0.9rem;
+    margin: 20px;
+    font-size: 0.9rem;
 
-      .example {
-        font-size: 0.8rem;
-      }
+    .example {
+      font-size: 0.8rem;
+    }
 
-      .caption {
-        font-size: 0.75rem;
-      }
+    .caption {
+      font-size: 0.75rem;
+    }
 
-      code {
-        font-size: 0.85rem;
-      }
+    code {
+      font-size: 0.85rem;
+    }
 
-      img {
-        width: 40%;
-      }
+    img {
+      width: 40%;
     }
 
     li {
@@ -278,11 +280,24 @@
     }
 
     p {
-      margin: 1em 0 0 0;
+      margin: 0.8rem 0 0 0;
     }
 
     center {
       margin: 5px 0;
+    }
+
+    .example-codility {
+      padding-left: 15px;
+      margin: 20px 10px;
+      border-left: 2px solid var(--primary);
+      p {
+        margin: 0.5rem 0;
+        padding-top: 0.5rem;
+      }
+      &:before {
+        content: '예를 들어, ';
+      }
     }
   }
 

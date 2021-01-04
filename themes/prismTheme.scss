@@ -117,8 +117,10 @@ pre[class*='language-'] {
   color: #546e7a;
 }
 
-.token.constant {
-  color: #c792ea;
+.token.constant,
+.token.parameter {
+  color: #E5BFAA;
+  font-weight: 600;
 }
 
 .token.deleted {
@@ -133,8 +135,9 @@ pre[class*='language-'] {
   color: #f07178;
 }
 
-.token.function {
-  color: #c792ea;
+.token.function,
+.token.function-variable {
+  color: #7EA1C4;
 }
 
 .token.hexcode {
